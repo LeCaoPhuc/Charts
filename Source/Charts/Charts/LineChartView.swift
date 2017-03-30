@@ -12,6 +12,17 @@
 import Foundation
 import CoreGraphics
 
+@objc(BarChartFormatter)
+public class BarChartFormatter: NSObject, IAxisValueFormatter{
+    
+    open var labels: [String]!
+
+    public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        
+        return labels[Int(value)]
+    }
+}
+
 /// Chart that draws lines, surfaces, circles, ...
 open class LineChartView: BarLineChartViewBase, LineChartDataProvider
 {
