@@ -24,6 +24,8 @@ open class LineChartView: BarLineChartViewBase, LineChartDataProvider
     
     // MARK: - LineChartDataProvider
     
+    open var lineData: LineChartData? { return _data as? LineChartData }
+
     open var lineChartData: LineChartData?
 
     open func setData() {
