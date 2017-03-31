@@ -85,10 +85,14 @@ open class LineChartView: BarLineChartViewBase, LineChartDataProvider
     open var lineChartMaxXRange: Double = 0.0
 
     open func setData() {
-        self.data = self.lineChartData;
+        self.data = self.lineChartData
     }
 
     open func setXRange() {
         self.setVisibleXRange(minXRange: self.lineChartMinXRange, maxXRange: self.lineChartMaxXRange)
+    }
+
+    open func setScaleEnable() {
+        self.setScaleEnabled(false)
     }
 }
