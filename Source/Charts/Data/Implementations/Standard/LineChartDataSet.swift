@@ -214,4 +214,10 @@ open class LineChartDataSet: LineRadarChartDataSet, ILineChartDataSet
         copy.mode = mode
         return copy
     }
+    
+    open var lineColor: NSUIColor?
+    
+    open func setLineColor() {
+        self.setColor(lineColor!)
+    }
 }
