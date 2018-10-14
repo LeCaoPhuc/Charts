@@ -174,7 +174,10 @@ open class BarChartView: BarLineChartViewBase, BarChartDataProvider
     // MARK: - BarChartDataProbider
     
     open var barData: BarChartData? { return _data as? BarChartData }
-    
+    open var barChartData: LineChartData?
+    open func setData() {
+        self.data = self.barChartData
+    }
     /// - returns: `true` if drawing values above bars is enabled, `false` ifnot
     open var isDrawValueAboveBarEnabled: Bool { return drawValueAboveBarEnabled }
     
